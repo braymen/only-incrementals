@@ -1,6 +1,6 @@
 # Looking to add your game?
 
-Create a Pull Request and add in a image for your thumbnail in the src/images and than add your game data to src/data/Games.ts.
+Create a Pull Request and add your game data to src/data/Games.ts with valid details. The image must be hosted somewhere else and be provided a valid URL.
 
 Not every game will be accepted. Curated lists will be done by me, but everyone who is approved, will be in the all games section.
 

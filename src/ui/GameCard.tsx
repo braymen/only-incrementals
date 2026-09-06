@@ -1,20 +1,11 @@
 import type { Game } from '../data/Games.ts'
 
-// A little trick I learned making my games
-const images = import.meta.glob('../images/*', {
-	eager: true,
-	query: '?url',
-	import: 'default'
-}) as Record<string, string>
-
 function GameCard({ game }: { game: Game }) {
-	const image = images[`../images/${game.image}`]
-
 	return (
 		<a className="game-card" href={game.url} target="_blank" rel="noreferrer">
 			<img
 				style={{ display: 'block', width: '100%', aspectRatio: '16/9', objectFit: 'cover' }}
-				src={image}
+				src={game.image}
 				alt={game.name}
 			/>
 			<div style={{ padding: '8px 16px' }}>
