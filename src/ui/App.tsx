@@ -1,10 +1,25 @@
 import logo from '../icons/favicon-white.svg'
 import giggity from '../icons/giggity.png'
-import { Games } from '../data/Games.ts'
+import { Games, type Game } from '../data/Games.ts'
 import GameCard from './GameCard.tsx'
+import { useState } from 'react'
+
+// stackoverflow copied shuffle
+function shuffle(array: Game[]): Game[] {
+	let currentIndex = array.length
+	while (currentIndex != 0) {
+		let randomIndex = Math.floor(Math.random() * currentIndex)
+		currentIndex--
+		;[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
+	}
+	return array
+}
 
 function App() {
 	const games = Games()
+
+	const [classicGames] = useState<Game[]>(shuffle([...games.filter((g) => g.tags.includes('classics'))]))
+	const [allGames] = useState<Game[]>(shuffle([...games]))
 
 	return (
 		<div className="container">
@@ -16,25 +31,24 @@ function App() {
 				<img className="logo-giggity" src={giggity} alt="" />
 			</div>
 			<p style={{ margin: 0, padding: 0, marginBottom: '24px', color: 'var(--text-muted)', fontStyle: 'italic' }}>
-				This is a site that is curated towards quality, non-vibe coded incrementals that you can play in your
-				browser. If you are a developer and think you might fit, please make a PR following the guidelines in
-				the readme.{' '}
+				This is a site that is curated towards quality (made with love), non-vibe coded incrementals that you
+				can play in your browser. If you are a developer and think you might fit, please make a PR following the
+				guidelines in the readme.{' '}
 				<a href="https://github.com/braymen/only-incrementals" target="_blank" rel="noreferrer">
 					Submit your game here
 				</a>
-				. All curation is subjective to Braymen's own taste for games.
+				. All curation lists are subjective to Braymen's own taste for games. List order is all randomized.
 			</p>
-			<h2>Classics Curation</h2>
+			<h2>The Classics</h2>
 			{/* TODO: SOME KIND OF CURATION LIST I CAN DO MYSELF */}
 			<div className="game-grid">
-				{games.map((game) => (
+				{classicGames.map((game) => (
 					<GameCard key={game.id} game={game} />
 				))}
 			</div>
-			<h2>All Games (Random + Not Curated)</h2>
-			{/* TODO: RANDOMIZE THIS! DONT FORGET IT */}
+			<h2>All Games</h2>
 			<div className="game-grid">
-				{games.map((game) => (
+				{allGames.map((game) => (
 					<GameCard key={game.id} game={game} />
 				))}
 			</div>
@@ -43,6 +57,7 @@ function App() {
 					margin: 0,
 					padding: 0,
 					marginBottom: '24px',
+					marginTop: '64px',
 					color: 'var(--text-muted)',
 					fontStyle: 'italic',
 					borderTop: '1px solid var(--text-muted)',
@@ -53,7 +68,7 @@ function App() {
 				<a href="https://github.com/braymen/only-incrementals" target="_blank" rel="noreferrer">
 					Checkout out the Open-Source GitHub Repo
 				</a>
-				.
+				. If you find mistakes, you are welcome to try and correct them too!
 			</p>
 		</div>
 	)
