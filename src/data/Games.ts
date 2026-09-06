@@ -4,7 +4,7 @@ export interface Game {
 	description: string // Description of Game
 	developer: string // Developer Name
 	url: string // URL to your game. Browser ONLY. No Steam.
-	image: string // Image file name from in the images folder.
+	image: string // Image file name from in the images folder. Just put the filename + extension. NO pathing
 }
 
 export const Games = (): Game[] => {
