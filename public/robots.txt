@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://onlyincrementals.com/sitemap.xml

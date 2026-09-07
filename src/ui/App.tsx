@@ -40,7 +40,6 @@ function App() {
 				. All curation lists are subjective to Braymen's own taste for games. List order is all randomized.
 			</p>
 			<h2>The Classics</h2>
-			{/* TODO: SOME KIND OF CURATION LIST I CAN DO MYSELF */}
 			<div className="game-grid">
 				{classicGames.map((game) => (
 					<GameCard key={game.id} game={game} />
