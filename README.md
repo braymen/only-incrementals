@@ -1,6 +1,6 @@
 # Looking to add your game?
 
-Create a Pull Request and add your game as `src/data/<Your Name or Studio Name>/<Your Game Name>.json`. The folder is the developer name and the file name is the game name. The image must be hosted somewhere else and be provided a valid URL.
+Create a Pull Request and add your game as `src/data/<Your Name or Studio Name>/<Your Game Name>.json`. The folder is the developer name and the file name is the game name. For both names, include the spaces and proper capitalization (look at the other games for examples). The image must be hosted somewhere else and be provided a valid URL.
 
 The JSON data you must fully include. Nothing more and nothing less.
 
