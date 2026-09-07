@@ -15,7 +15,9 @@ The JSON data you must fully include. Nothing more and nothing less.
 
 Tags should be empty! Only Braymen adds them.
 
-Not every game will be accepted. Curated lists will be done by me, but everyone who is approved, will be in the all games section.
+Curated lists will be done by me, but everyone who is approved, will be in the all games section.
+
+Not every game will be accepted. Some of those reasons can be found below. It's a subjective list of games as well. 
 
 # What games will likely NOT be approved?
 
