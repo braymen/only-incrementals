@@ -6,10 +6,10 @@ function GameCard({ game }: { game: Game }) {
 			<img
 				style={{ display: 'block', width: '100%', aspectRatio: '16/9', objectFit: 'cover' }}
 				src={game.image}
-				alt={game.name}
+				alt={game.title}
 			/>
 			<div style={{ padding: '8px 16px' }}>
-				<h2 style={{ margin: 0, fontSize: '16px' }}>{game.name}</h2>
+				<h2 style={{ margin: 0, fontSize: '16px' }}>{game.title}</h2>
 				<p
 					style={{
 						margin: '2px 0px 4px 0px',
