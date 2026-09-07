@@ -1,8 +1,8 @@
 {
-	"developer": "Bloodrizer",
-	"title": "Kittens Game",
-	"description": "Dark Souls of incremental gaming. You are a kitten in a catnip forest.",
-	"url": "https://kittensgame.com/web/",
-	"image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1097410/81cf33327fa9e8310a31e88712794a6a246a4935/capsule_616x353.jpg?t=1784781641",
-	"tags": ["classics"]
+    "developer": "Bloodrizer",
+    "title": "Kittens Game",
+    "description": "Dark Souls of incremental gaming. You are a kitten in a catnip forest.",
+    "url": "https://kittensgame.com/web/",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1097410/81cf33327fa9e8310a31e88712794a6a246a4935/capsule_616x353.jpg?t=1784781641",
+    "tags": ["classics"]
 }
