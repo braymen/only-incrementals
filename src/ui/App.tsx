@@ -45,7 +45,7 @@ function App() {
                     <GameCard key={game.id} game={game} />
                 ))}
             </div>
-            <h2>All Games</h2>
+            <h2 style={{ marginTop: '96px' }}>All Games</h2>
             <div className="game-grid">
                 {allGames.map((game) => (
                     <GameCard key={game.id} game={game} />
